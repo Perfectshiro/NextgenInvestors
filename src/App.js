@@ -82,7 +82,7 @@ const App = () => {
       <div 
         className="absolute inset-0 z-0 bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('https://i.postimg.cc/52tbYcXr/Background_4x.png')`,
+          backgroundImage: `url('https://img2.pic.in.th/Background4x.png')`,
           backgroundSize: 'cover'
         }}
       />
@@ -91,7 +91,7 @@ const App = () => {
       <div 
         className="absolute inset-0 z-10 bg-bottom bg-no-repeat"
         style={{
-          backgroundImage: `url('https://i.postimg.cc/MKqWwfqq/Middleground_4x.png')`,
+          backgroundImage: `url('https://img5.pic.in.th/file/secure-sv1/Middleground4x.png')`,
           backgroundSize: 'contain'
         }}
       />
@@ -100,7 +100,7 @@ const App = () => {
       <div 
         className="absolute inset-0 z-20 bg-bottom bg-no-repeat"
         style={{
-          backgroundImage: `url('https://i.postimg.cc/RFrD5Y2h/Artboard_2.png')`,
+          backgroundImage: `url('https://img5.pic.in.th/file/secure-sv1/Artboard-16052b888d11f366d.png')`,
           backgroundSize: 'contain' 
         }}
       />
@@ -111,7 +111,7 @@ const App = () => {
         {/* ส่วนโลโก้และคำอธิบาย */}
         <div className="mb-2 animate-fade flex flex-col items-center">
           <img 
-            src="https://i.postimg.cc/d32wYrJd/Logo.png" 
+            src="https://img2.pic.in.th/Logo7503add0726196b3.png" 
             alt="Board Game Online Logo" 
             className="w-full max-w-md md:max-w-xl lg:max-w-2xl h-auto drop-shadow-2xl mx-auto"
           />
@@ -147,7 +147,7 @@ const App = () => {
             setCurrentSlide(0);
             setShowHowToPlay(true);
           }}
-          className="font-itim mt-2 px-10 py-4 bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-2xl rounded-full border-2 border-white border-opacity-50 transition-all flex items-center gap-2"
+          className="font-kanit mt-2 px-10 py-4 bg-black bg-opacity-40 hover:bg-opacity-60 text-white text-2xl rounded-full border-2 border-white border-opacity-50 transition-all flex items-center gap-2"
         >
           วิธีการเล่น (How to Play)
         </button>
