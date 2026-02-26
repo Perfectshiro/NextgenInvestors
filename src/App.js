@@ -7,7 +7,7 @@ const App = () => {
     playEnglish: "https://board-game-en.vercel.app/", 
     manualThai: "https://1drv.ms/b/c/97f16aae7837bd72/IQAMTYMdWharQKalRL9KU6UYAVDrzUHq4o--M9FyT8p5N5U?e=VH8zhW",  
     manualEnglish: "https://1drv.ms/b/c/97f16aae7837bd72/IQDdUB16wjqBT730X348ZuloAVj_mNJHmFjnpOouAT8wEDY?e=tKHgz6",
-    moderator: "https://your-moderator-url.com" 
+    moderator: "https://mod-app.vercel.app/" 
   };
 
   return (
