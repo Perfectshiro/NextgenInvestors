@@ -3,10 +3,11 @@ import React from 'react';
 const App = () => {
   // --- ใส่ URL สำหรับแต่ละปุ่มที่นี่ครับ ---
   const urls = {
-    playThai: "https://board-game-delta.vercel.app/", // ลิงก์เล่นเกม (ภาษาไทย)
-    playEnglish: "https://board-game-en.vercel.app/", // ลิงก์เล่นเกม (English)
-    manualThai: "https://1drv.ms/b/c/97f16aae7837bd72/IQAMTYMdWharQKalRL9KU6UYAVDrzUHq4o--M9FyT8p5N5U?e=VH8zhW",  // ลิงก์คู่มือ (ภาษาไทย)
-    manualEnglish: "https://1drv.ms/b/c/97f16aae7837bd72/IQDdUB16wjqBT730X348ZuloAVj_mNJHmFjnpOouAT8wEDY?e=tKHgz6" // ลิงก์คู่มือ (English)
+    playThai: "https://board-game-delta.vercel.app/", 
+    playEnglish: "https://board-game-en.vercel.app/", 
+    manualThai: "https://1drv.ms/b/c/97f16aae7837bd72/IQAMTYMdWharQKalRL9KU6UYAVDrzUHq4o--M9FyT8p5N5U?e=VH8zhW",  
+    manualEnglish: "https://1drv.ms/b/c/97f16aae7837bd72/IQDdUB16wjqBT730X348ZuloAVj_mNJHmFjnpOouAT8wEDY?e=tKHgz6",
+    moderator: "https://your-moderator-url.com" 
   };
 
   return (
@@ -34,16 +35,28 @@ const App = () => {
           text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
         }
 
-        /* ปุ่มคู่มือด้านล่าง */
         .btn-manual {
-          background-color: rgba(55, 65, 81, 0.8); /* สีเทาเข้มแบบในรูป */
+          background-color: rgba(55, 65, 81, 0.8);
           border: 1px solid rgba(255, 255, 255, 0.3);
           transition: all 0.2s;
           text-decoration: none;
         }
         .btn-manual:hover {
           background-color: rgba(75, 85, 99, 1);
-          transform: scale(1.05);
+          transform: scale(1.02);
+        }
+
+        .btn-moderator-full {
+          background-color: #f7d23d; 
+          color: #000; 
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          text-decoration: none;
+        }
+        .btn-moderator-full:hover {
+          background-color: #ffeb3b;
+          transform: translateY(-3px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
         }
       `}</style>
 
@@ -59,6 +72,7 @@ const App = () => {
         <div className="mb-2 animate-fade flex flex-col items-center">
           <img src="https://img2.pic.in.th/Logo7503add0726196b3.png" alt="Logo" className="w-full max-w-md md:max-w-xl lg:max-w-2xl h-auto drop-shadow-2xl mx-auto" />
           
+          {/* --- คำอธิบายเกม (กลับมาแล้วครับ) --- */}
           <div className="mt-4 px-6 py-4 description-box rounded-3xl max-w-2xl mx-auto">
             <p className="text-sm md:text-base font-normal leading-relaxed text-white">
               <span className="text-yellow-custom italic">NextGen Investors</span> เป็นเกมที่มุ่งเน้นให้ผู้เล่นได้พัฒนาและฝึกฝนทักษะทางการเงินและการลงทุนผ่านการจำลองสถานการณ์จริง โดยบูรณาการหลักปรัชญาเศรษฐกิจพอเพียงเข้ามาเป็นแกนหลัก ผู้เล่นจะได้เรียนรู้การวางแผน จัดการเงิน และตัดสินใจลงทุนภายใต้ความเสี่ยงอย่าง มีเหตุผล พอประมาณ และมีภูมิคุ้มกันที่ดี เพื่อสร้างความมั่งคั่งให้ตนเองและก้าวสู่การเป็นผู้ประกอบการที่ประสบความสำเร็จ นอกจากนี้ยังช่วยปลูกฝังความเข้าใจในหลักการบริหารเงินอย่างยั่งยืน และเตรียมความพร้อมสำหรับอนาคตทางการเงินที่มั่นคง โดยผู้เล่นที่มีมูลค่ารวมของเงินมากที่สุดเมื่อจบเกมจะเป็นผู้ชนะ
@@ -66,7 +80,7 @@ const App = () => {
           </div>
         </div>
 
-        {/* ปุ่มเข้าเล่นหลัก (สีส้ม-น้ำเงิน) */}
+        {/* ปุ่มเข้าเล่นหลัก (ภาษาไทย - English) */}
         <div className="flex flex-row gap-6 w-full max-w-2xl justify-center items-center">
           <a 
             href={urls.playThai} 
@@ -84,7 +98,19 @@ const App = () => {
           </a>
         </div>
 
-        {/* ปุ่มวิธีเล่น (แยกภาษา และเป็นลิงก์ออกภายนอก) */}
+        {/* ปุ่ม Moderator (กว้างเท่ากับ 2 ปุ่มบนรวมกัน และเป็นสีเหลืองทึบ) */}
+        <div className="w-full max-w-2xl">
+          <a 
+            href={urls.moderator}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-moderator-full block w-full py-4 rounded-3xl font-bold text-xl md:text-2xl flex items-center justify-center gap-3 no-underline border-4 border-white border-opacity-30"
+          >
+            ⚙️ Moderator
+          </a>
+        </div>
+
+        {/* ปุ่มวิธีเล่น (อยู่ล่างสุด) */}
         <div className="flex flex-row gap-4 mt-2">
           <a 
             href={urls.manualThai}
